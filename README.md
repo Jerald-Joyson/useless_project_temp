@@ -115,11 +115,11 @@ npm start
 - This is a simple selection game where:
 - Purpose: Randomly select a member/item with a fun interactive twist
 - Core Mechanic: The second tap automatically becomes the winner
-### How it Works:
+#### How it Works:
 - First tap places a red numbered point (#1)
 - Second tap places a green numbered point (#2) - this is automatically the winner
 - No need for a separate selection button
-### Features:
+#### Features:
 - Visual feedback with red/green colors
 - Numbered points for clarity
 - Simple reset button to start over
