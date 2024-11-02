@@ -121,16 +121,16 @@ const MemberSelectionApp = () => {
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={[
-              styles.button,
+              styles.button1,
               touchPoints.size === 0 && styles.buttonDisabled,
             ]}
             onPress={handleSelection}
             disabled={touchPoints.size === 0}
           >
-            <Text style={styles.buttonText}>Select Random Point</Text>
+            <Text style={styles.buttonText1}>Select Random Point</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={resetSelection}>
-            <Text style={styles.buttonText}>Reset</Text>
+          <TouchableOpacity style={styles.button2} onPress={resetSelection}>
+            <Text style={styles.buttonText2}>Reset</Text>
           </TouchableOpacity>
         </View>
         <Text style={styles.instructionText}>
@@ -199,17 +199,28 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-  button: {
-    backgroundColor: "#1E90FF",
+  button1: {
+    backgroundColor: "#2CEE89",
+    padding: 10,
+    borderRadius: 5,
+    width: "45%",
+    alignItems: "center",
+  },
+  button2: {
+    backgroundColor: "#E54343",
     padding: 10,
     borderRadius: 5,
     width: "45%",
     alignItems: "center",
   },
   buttonDisabled: {
-    backgroundColor: "#666",
+    backgroundColor: "#D0D7DF",
   },
-  buttonText: {
+  buttonText1: {
+    color: "#000",
+    fontSize: 16,
+  },
+  buttonText2: {
     color: "#fff",
     fontSize: 16,
   },
