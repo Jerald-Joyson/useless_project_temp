@@ -78,10 +78,6 @@ For iOS:
 npx react-native run-ios
 ```
 
-```bash
-npx react-native run-android
-```
-
 # Run
 
 Run the app:
