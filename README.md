@@ -22,7 +22,7 @@ Have you ever needed a truly biased random number selector that _always_ picks t
 
 ### The Solution (that nobody asked for)
 
-We solved this non-existent problem by creating a member selection app that deceives users with the illusion of randomness but lands on the 5th item every time. Why? Because sometimes you just want a guaranteed "random" outcome with zero suspense or surprise.
+We solved this non-existent problem by creating a member selection app that deceives users with the illusion of randomness but lands on the 2nd item every time. Why? Because sometimes you just want a guaranteed "random" outcome with zero suspense or surprise.
 
 ## Technical Details
 
