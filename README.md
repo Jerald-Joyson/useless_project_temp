@@ -45,6 +45,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Jerald-Joyson/useless_project_temp.git
+
 cd useless_project_temp/Tap-and-Traps/
 ```
 
@@ -80,47 +81,56 @@ Run the app:
 npm start
 ```
 
-### Project Documentation
+# Project Documentation
 
-For Software:
+## Screenshots
 
-# Screenshots (Add at least 3)
+### Home Screen
 
-![Screenshot1](Add screenshot 1 here with proper name)
-_Add caption explaining what this shows_
+![ddb39c0a-05c6-42e3-9edd-c37e7db318cf](https://github.com/user-attachments/assets/36a7c115-89b7-4913-b757-2d96d0c4d79c)
 
-![Screenshot2](Add screenshot 2 here with proper name)
-_Add caption explaining what this shows_
+- Welcome to Tap & Traps! Tap ‘Start Selection’ and follow the steps – only your second tap counts. Get ready for a fun twist on choosing!
 
-![Screenshot3](Add screenshot 3 here with proper name)
-_Add caption explaining what this shows_
+### Member Selection Screen
+
+![341ef30d-64c2-4667-a6e3-ae848b716a93](https://github.com/user-attachments/assets/a0cebfb0-d6b4-4687-aba3-7e18356ef78e)
+![bce047bd-b938-4c2b-aa15-89a774a6584b](https://github.com/user-attachments/assets/4ba85001-abad-4d6e-9b5a-08ffd7280617)
+
+- Tap to choose! Each click is counted and displayed on screen, with buttons to go back, reset, or select a random point. Only your second click will decide the selection – make it count!
+
+### Member selection
+
+![660713eb-732d-4387-8c3b-0b2b4e8b8988](https://github.com/user-attachments/assets/60e1d1a8-891f-4235-bf77-715aa9608916)
+![ede03644-26bf-4526-a913-36818ea177a0](https://github.com/user-attachments/assets/5acbb644-16c4-431c-b791-a935fbf9683c)
+
+- Selection complete! The second clicker has been chosen. Ready for another round? Tap reset to play again!
 
 # Diagrams
 
-![Workflow](Add your workflow/architecture diagram here)
-_Add caption explaining your workflow_
+### Workflow
 
-# Build Photos
+![b275b1c5-4c64-4400-9e9d-1c340917f02a](https://github.com/user-attachments/assets/3e902fda-ed68-47fd-a686-45ea27291d9a)
 
-![Components](Add photo of your components here)
-_List out all components shown_
+**Tap & Traps** - Second Click Winner
+- This is a simple selection game where:
+- Purpose: Randomly select a member/item with a fun interactive twist
+- Core Mechanic: The second tap automatically becomes the winner
+### How it Works:
+- First tap places a red numbered point (#1)
+- Second tap places a green numbered point (#2) - this is automatically the winner
+- No need for a separate selection button
+### Features:
+- Visual feedback with red/green colors
+- Numbered points for clarity
+- Simple reset button to start over
+  The app's design makes it impossible to manipulate the outcome since the second tap is always automatically selected, ensuring a fair and random selection process. Perfect for quick decisions or choosing random participants in a group.
 
-![Build](Add photos of build process here)
-_Explain the build steps_
+# Project Demo
 
-![Final](Add photo of final product here)
-_Explain the final build_
+## Video
 
-### Project Demo
+https://github.com/user-attachments/assets/54f4bf43-c7e0-4276-909c-04f7ac0f2289
 
-# Video
-
-[Add your demo video link here]
-_Explain what the video demonstrates_
-
-# Additional Demos
-
-[Add any extra demo materials/links]
 
 ## Team Contributions
 
