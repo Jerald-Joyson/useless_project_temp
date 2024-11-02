@@ -14,15 +14,15 @@
 
 ### Project Description
 
-[2-3 lines about what your project does]
+**Tap & Traps** is an app that hilariously pretends to select a random member, but there's a catch: it always picks the second selection. Built using React Native, this app is an exercise in playful coding that brings an amusingly pointless twist to randomization.
 
 ### The Problem (that doesn't exist)
 
-[What ridiculous problem are you solving?]
+Have you ever needed a truly biased random number selector that _always_ picks the 2nd item? No? Well, that’s exactly the non-issue this project tackles! It’s perfect for ensuring your selection process is predictably random—predictable because it’s always the same.
 
 ### The Solution (that nobody asked for)
 
-[How are you solving it? Keep it fun!]
+We solved this non-existent problem by creating a member selection app that deceives users with the illusion of randomness but lands on the 5th item every time. Why? Because sometimes you just want a guaranteed "random" outcome with zero suspense or surprise.
 
 ## Technical Details
 
@@ -30,20 +30,14 @@
 
 For Software:
 
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-
-- [List main components]
-- [List specifications]
-- [List tools required]
+- **Languages used**: JavaScript
+- **Frameworks used**: React Native
+- **Libraries used**: React Native built-in components, any state management libraries if applicable (e.g., Redux or Context API)
+- **Tools used**: Visual Studio Code for development, Expo CLI for running and testing the app, Git for version control
 
 ### Implementation
 
-For Software:
+The app was implemented using React Native to build the UI and JavaScript for the core logic. The random number generation is intentionally coded to always return the 2nd item. The app includes components for user interaction, such as buttons and display areas for the result, while React Native's rendering capabilities handle user inputs and visuals.
 
 # Installation
 
@@ -106,16 +100,6 @@ _Add caption explaining what this shows_
 ![Workflow](Add your workflow/architecture diagram here)
 _Add caption explaining your workflow_
 
-For Hardware:
-
-# Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-_Add caption explaining connections_
-
-![Schematic](Add your schematic diagram here)
-_Add caption explaining the schematic_
-
 # Build Photos
 
 ![Components](Add photo of your components here)
@@ -140,9 +124,9 @@ _Explain what the video demonstrates_
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Jerald Joyson: Overall Project Building (HomePage/MemberSection)
+- Mohamed Nishan: Logic Build (backend)
+- Viswajith V P: Overall Design (frontend)
 
 ---
 
