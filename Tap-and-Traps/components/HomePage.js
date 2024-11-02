@@ -11,7 +11,7 @@ const HomePage = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Tap & Traps</Text>
+        <Text style={styles.title}>TAP & TRAPS</Text>
         <Text style={styles.subtitle}>Random Member Selection</Text>
       </View>
 
@@ -62,13 +62,18 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 0.8)", // Semi-transparent white for readability
   },
   header: {
-    backgroundColor: "#f4511e",
-    padding: 20,
+    backgroundColor: "#000",
+    padding: 10,
     alignItems: "center",
     paddingTop: 40,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 10, // for Android shadow effect
   },
   title: {
-    fontSize: 32,
+    fontSize: 52,
     fontWeight: "bold",
     color: "#fff",
     marginBottom: 8,
@@ -100,7 +105,7 @@ const styles = StyleSheet.create({
   infoTitle: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#f4511e",
+    color: "#000",
     marginBottom: 15,
   },
   instructionContainer: {
@@ -112,7 +117,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
   startButton: {
-    backgroundColor: "#f4511e",
+    backgroundColor: "#000",
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
@@ -128,7 +133,7 @@ const styles = StyleSheet.create({
   },
   startButtonText: {
     color: "#fff",
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: "bold",
   },
   footer: {
