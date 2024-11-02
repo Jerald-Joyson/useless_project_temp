@@ -47,11 +47,48 @@ For Software:
 
 # Installation
 
-[commands]
+Clone the repository:
+
+```bash
+git clone https://github.com/Jerald-Joyson/useless_project_temp.git
+cd useless_project_temp/Tap-and-Traps/
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+For Web:
+
+```bash
+npx expo install react-native-web react-dom @expo/metro-runtime
+```
+
+For Android:
+
+```bash
+npx react-native run-android
+```
+
+For iOS:
+
+```bash
+npx react-native run-ios
+```
+
+```bash
+npx react-native run-android
+```
 
 # Run
 
-[commands]
+Run the app:
+
+```bash
+npm start
+```
 
 ### Project Documentation
 

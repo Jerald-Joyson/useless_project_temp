@@ -6,32 +6,36 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 To get started with the app, follow these steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Jerald-Joyson/useless_project_temp.git
-   cd useless_project_temp/Tap-and-Traps/
-   ```
+Clone the repository:
 
-````
+```bash
+git clone https://github.com/Jerald-Joyson/useless_project_temp.git
+cd useless_project_temp/Tap-and-Traps/
+```
 
-2. Install the dependencies:
+Install the dependencies:
 
-   ```bash
-   npm install
-````
+```bash
+npm install
+```
 
-3. Run the app:
-   For iOS:
+For Android:
 
-   ```bash
-   npx react-native run-ios
-   ```
+```bash
+npx react-native run-android
+```
 
-   For Android:
+For Web:
 
-   ```bash
-   npx react-native run-android
-   ```
+```bash
+npx expo install react-native-web react-dom @expo/metro-runtime
+```
+
+Run the app:
+
+```bash
+npm start
+```
 
 ## Contributing
 
