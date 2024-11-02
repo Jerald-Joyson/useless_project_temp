@@ -13,6 +13,7 @@ const MemberSelectionApp = () => {
   const [touchPoints, setTouchPoints] = useState(new Map());
   const [selectedPoints, setSelectedPoints] = useState(new Map());
   const [pointCount, setPointCount] = useState(1);
+  const [winnerRevealed, setWinnerRevealed] = useState(false);
 
   const handleTouchStart = (event) => {
     const touch = event.nativeEvent;
@@ -26,6 +27,7 @@ const MemberSelectionApp = () => {
       y: touch.pageY - 70, // Adjust for top section height
       timestamp: Date.now(),
       count: pointCount,
+      isSecond: pointCount === 2, // Flag to identify the second point
     });
 
     setTouchPoints(newTouchPoints);
@@ -33,24 +35,30 @@ const MemberSelectionApp = () => {
   };
 
   const handleSelection = () => {
-    if (touchPoints.size > 0) {
-      // Convert touchPoints Map to array for random selection
+    if (touchPoints.size >= 2) {
+      // Find the second point (where count === 2)
       const touchPointsArray = Array.from(touchPoints.entries());
-      const randomIndex = Math.floor(Math.random() * touchPointsArray.length);
-      const [selectedId, selectedPoint] = touchPointsArray[randomIndex];
+      const secondPoint = touchPointsArray.find(
+        ([_, point]) => point.count === 2
+      );
 
-      // Update selected points
-      const newSelectedPoints = new Map(selectedPoints);
-      newSelectedPoints.set(selectedId, {
-        ...selectedPoint,
-        isSelected: true,
-      });
-      setSelectedPoints(newSelectedPoints);
+      if (secondPoint) {
+        const [selectedId, selectedPoint] = secondPoint;
 
-      // Remove selected point from touch points
-      const newTouchPoints = new Map(touchPoints);
-      newTouchPoints.delete(selectedId);
-      setTouchPoints(newTouchPoints);
+        // Update selected points
+        const newSelectedPoints = new Map(selectedPoints);
+        newSelectedPoints.set(selectedId, {
+          ...selectedPoint,
+          isSelected: true,
+        });
+        setSelectedPoints(newSelectedPoints);
+
+        // Remove selected point from touch points
+        const newTouchPoints = new Map(touchPoints);
+        newTouchPoints.delete(selectedId);
+        setTouchPoints(newTouchPoints);
+        setWinnerRevealed(true);
+      }
     }
   };
 
@@ -58,13 +66,10 @@ const MemberSelectionApp = () => {
     setTouchPoints(new Map());
     setSelectedPoints(new Map());
     setPointCount(1);
+    setWinnerRevealed(false);
   };
 
-  const renderTouchPoint = (
-    point,
-    key,
-    isSelected // Removed parameter types
-  ) => (
+  const renderTouchPoint = (point, key, isSelected) => (
     <Animated.View
       key={key}
       style={[
@@ -72,15 +77,16 @@ const MemberSelectionApp = () => {
         {
           left: point.x - 30,
           top: point.y - 30,
-          backgroundColor: isSelected ? "#00FF0033" : "#FF000033",
-          borderColor: isSelected ? "#00FF00" : "#FF0000",
+          backgroundColor:
+            isSelected && winnerRevealed ? "#00FF0033" : "#FF000033",
+          borderColor: isSelected && winnerRevealed ? "#00FF00" : "#FF0000",
         },
       ]}
     >
       <Text
         style={[
           styles.pointNumber,
-          { color: isSelected ? "#00FF00" : "#FF0000" },
+          { color: isSelected && winnerRevealed ? "#00FF00" : "#FF0000" },
         ]}
       >
         {point.count}
@@ -122,10 +128,10 @@ const MemberSelectionApp = () => {
           <TouchableOpacity
             style={[
               styles.button1,
-              touchPoints.size === 0 && styles.buttonDisabled,
+              touchPoints.size < 2 && styles.buttonDisabled,
             ]}
             onPress={handleSelection}
-            disabled={touchPoints.size === 0}
+            disabled={touchPoints.size < 2}
           >
             <Text style={styles.buttonText1}>Select Random Point</Text>
           </TouchableOpacity>
