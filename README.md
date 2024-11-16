@@ -127,7 +127,7 @@ npm start
 
 # Project Demo
 
-### To view the demo [click me >>](https://tapandtraps1.vercel.app/)
+#### To view the demo [click me >>](https://tapandtraps1.vercel.app/)
 
 ## Video
 
